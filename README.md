@@ -1,39 +1,41 @@
 # hologram-styles
 Hologram Default Style Files intended to be used with a vanilla instance of Middleman
 
-# 1. CREATE MIDDLEMAN
+# 1. Create Middleman Instance
 ```
 middleman init [NAME_OF_PROJECT]
 middleman build
 middleman server
 ```
 
-# 2. ADD HOLOGRAM GEM
+# 2. Add Hologram Gem
 …go into Gemfile, add `gem 'hologram'`
-`bundle`
+```
+bundle
+```
 
-# 3. ADD TEST DOCUMENTATION
+# 3. Add teste documentation
 …open site.css.scss and add hologram documentation
 
-# 4. CREATE STYLEGUIDE FOLDER
+# 4. Create Styleguide Folder
 ```
 cd source
 mkdir styleguide
 ```
 
-# 5. INITIALIZE HOLOGRAM INSIDE STYLEGUIDE FOLDER
+# 5. Initialize Hologram
 ```
 cd styleguide
 hologram init
 ```
 
-### 6A. OPTIONAL
+# 6A. Optional: Replace Hologram files with this repository
 replace styleguide folder with:
 https://github.com/daphotron/hologram-styles
 
 then skip to step # 7. RUN HOLOGRAM
 
-# 6. CONFIGURE HOLOGRAM
+# 6. Configure Hologram
 …open hologram_config.yml
 ```
 source: ../stylesheets
@@ -41,11 +43,11 @@ destination: ./
 # - ./build
 ```
 
-# 7. RUN HOLOGRAM
+# 7. Run Hologram
 ```
 cd ../../
 hologram source/styleguide/hologram_config.yml
 ```
 
-# 8. VISIT YOUR STYLEGUIDE
+# 8. Visit your styleguide
 /styleguide/index.html
