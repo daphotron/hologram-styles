@@ -1,0 +1,279 @@
+
+// Buttons
+//=========================================
+// Variables
+$color-border-soft: #ccc;
+$bp-700: 700px;
+//=========================================
+
+// Clearfix
+//=========================================
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clear {
+  clear: both;
+}
+
+// Positioning
+//=========================================
+.center {
+  margin: 0 auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inline-block {
+  display: inline-block;
+}
+
+// Helpers
+//=========================================
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+
+// Padding and Margin
+//=========================================
+
+// padding and margin
+$space_sizes:
+  (xl, 5rem),    //large
+  (l, 2.5rem),    //large
+  (m, 2rem),  //medium
+  (d, 1.5rem),  //default
+  (s, 0.5rem),  //small
+  (xs, 0.25rem) //x-small
+;
+$orientation_list: (
+  v,
+  h
+);
+$direction_list: (
+  (t, top),
+  (r, right),
+  (b, bottom),
+  (l, left)
+);
+
+@each $space_sizes, $size in $space_sizes {
+  .pa#{$space_sizes} {
+    padding: 1rem;
+    @media (min-width: $bp-700) {
+      padding: $size;
+    }
+  }
+  .ma#{$space_sizes} {
+    margin: 1rem;
+    @media (min-width: $bp-700) {
+      margin: $size;
+    }
+  }
+}
+@each $direction_list, $direction in $direction_list {
+  @each $space_sizes, $size in $space_sizes {
+    .p#{$direction_list}#{$space_sizes} {
+      padding-#{$direction}: 1rem;
+      @media (min-width: $bp-700) {
+        padding-#{$direction}: $size;
+      }
+    }
+    .m#{$direction_list}#{$space_sizes} {
+      margin-#{$direction}: 1rem;
+      @media (min-width: $bp-700) {
+        margin-#{$direction}: $size;
+      }
+    }
+  }
+}
+@each $orientation_list, $orientation in $orientation_list {
+  @each $space_sizes, $size in $space_sizes {
+    @if $orientation_list == "v" {
+      .p#{$orientation_list}#{$space_sizes} {
+        padding-bottom: 1rem;
+        @media (min-width: $bp-700) {
+          padding-bottom: $size;
+          padding-top: $size;
+        }
+      }
+      .m#{$orientation_list}#{$space_sizes} {
+        margin-bottom: 1rem;
+        @media (min-width: $bp-700) {
+          margin-bottom: $size;
+          margin-top: $size;
+        }
+      }
+    }
+    @else if $orientation_list == "h" {
+      .p#{$orientation_list}#{$space_sizes} {
+      padding-left: 1rem;
+        @media (min-width: $bp-700) {
+          padding-left: $size;
+          padding-right: $size;
+        }
+      }
+      .m#{$orientation_list}#{$space_sizes} {
+        margin-left: 1rem;
+        @media (min-width: $bp-700) {
+          margin-left: $size;
+          margin-right: $size;
+        }
+      }
+    }
+  }
+}
+
+// border
+$border_sizes:
+  (l, 5px), //large
+  (m, 2px), //medium
+  (d, 1px)  //normal
+;
+
+@each $border_sizes, $size in $border_sizes {
+  .ba#{$border_sizes} {
+    border: $size solid $color-border-soft;
+  }
+}
+@each $direction_list, $direction in $direction_list {
+  @each $border_sizes, $width in $border_sizes {
+    @if $border_sizes != "" {
+      .b#{$direction_list}#{$border_sizes} {
+        border-#{$direction}: $width solid $color-border-soft;
+      }
+    }
+    @else  {
+      .b#{$direction_list} {
+        border-#{$direction}: $width solid $color-border-soft;
+      }
+    }
+  }
+}
+@each $orientation_list, $orientation in $orientation_list {
+  @each $border_sizes, $size in $border_sizes {
+    $hyphen: '';
+    @if $space_sizes != ''{
+      $hyphen: '-';
+    }
+    @if $orientation_list == "v" {
+      .b#{$orientation_list}#{$border_sizes} {
+        border-bottom: $size;
+        border-top: $size;
+      }
+    }
+    @else if $orientation_list == "h" {
+      .b#{$orientation_list}#{$border_sizes} {
+        border-left: $size;
+        border-right: $size;
+      }
+    }
+  }
+}
+
+/*doc
+---
+title: Toolbox
+name: toolbox
+category: basics
+---
+toolbox.scss
+
+```html_example
+
+<div class="ptd bold">
+  PADDING
+</div>
+<div class="paxs bad">
+  .paxs
+</div>
+<div class="pas bad">
+  .pas
+</div>
+<div class="pad bad">
+  .pad
+</div>
+<div class="pam bad">
+  .pam
+</div>
+<div class="pal bad">
+  .pal
+</div>
+<div class="paxl bad">
+  .paxl
+</div>
+
+<div class="ptm bold">
+  MARGIN
+</div>
+<div class="maxs bad">
+  .maxs
+</div>
+<div class="mas bad">
+  .mas
+</div>
+<div class="mad bad">
+  .mad
+</div>
+<div class="mam bad">
+  .mam
+</div>
+<div class="mal bad">
+  .mal
+</div>
+<div class="maxl bad">
+  .maxl
+</div>
+
+<div class="ptm bold">
+  TARGETTED SIDES
+</div>
+<div class="ptd bad">
+  .ptd (top)
+</div>
+<div class="prd bad">
+  .prd (right)
+</div>
+<div class="pbd bad">
+  .pbd (bottom)
+</div>
+<div class="pld bad">
+  .pld (left)
+</div>
+
+<div class="pvd bad">
+  .pvd (vertical)
+</div>
+<div class="phd bad">
+  .prd (horizontal)
+</div>
+
+<div class="clearfix">
+  <div class="left">.left</div>
+  <div class="right">.right</div>
+</div>
+<div class="clear">.clear</div>
+<div class="center">.center</div>
+<div class="absolute">.absolute</div>
+<div class="relative mvd">.relative</div>
+<div class="inline-block">.inline-block</div>
+<div class="align-center">.align-center</div>
+<div class="align-right">.align-right</div>
+```
+*/

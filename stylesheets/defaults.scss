@@ -1,0 +1,108 @@
+
+// Defaults
+//=========================================
+// Variables
+$blue: #4a90e2;
+
+// Text
+$color-link: $blue;
+$color-text: #333;
+
+// Backgrounds
+$color-bg-body: #fbfbfb;
+
+// Fonts
+$avenir: 'Avenir', 'Helvetica Neue', sans-serif;
+$font-primary: $avenir; // body
+//=========================================
+* {
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background: $color-bg-body;
+  color: $color-text;
+  font-family: $font-primary;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+h1, h2 {
+  line-height: 1.1;
+}
+a {
+  border-bottom: 1px solid transparent;
+  color: $color-link;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.1s;
+  &:hover {
+    border-color: $color-link;
+  }
+}
+p {
+  margin: 0;
+}
+
+// Forms
+form {
+  margin: 0;
+}
+button,
+input {
+  font-family: font-primary;
+  font-size: 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+input[type=text] {
+  border: 1px solid #ccc;
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:input-placeholder {
+    color: #999;
+  }
+}
+input[type=submit] {
+  border: 0;
+  display: inline-block;
+}
+
+// LISTS
+// =========================================
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+caption,
+th {
+  text-align: left;
+}
+

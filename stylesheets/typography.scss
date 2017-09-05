@@ -1,0 +1,138 @@
+
+// Typography
+//=========================================
+// Variables
+$blue: #4a90e2;
+$color-link: $blue;
+$base-font-size: 16;
+$bp-700: 700/$base-font-size + 0rem;
+
+$h1: 50/$base-font-size + 0rem;
+$h2: 40/$base-font-size + 0rem;
+$h3: 30/$base-font-size + 0rem;
+$h4: 24/$base-font-size + 0rem;
+$h5: 20/$base-font-size + 0rem;
+$h: 16/$base-font-size + 0rem;
+$hxs: 14/$base-font-size + 0rem;
+
+// Font sizes on a smaller screen
+$bp-h1: 24/$base-font-size + 0rem;
+$bp-h2: 20/$base-font-size + 0rem;
+$bp-h3: 20/$base-font-size + 0rem;
+$bp-h4: 16/$base-font-size + 0rem;
+$bp-h5: 16/$base-font-size + 0rem;
+$bp-h: 16/$base-font-size + 0rem;
+$bp-hxs: 16/$base-font-size + 0rem;
+
+@mixin h1 {
+  font-size: $bp-h1;
+  line-height: 1.2;
+  @media (min-width: $bp-700) {
+    font-size: $h1;
+  }
+}
+@mixin h2 {
+  font-size: $bp-h2;
+  @media (min-width: $bp-700) {
+    font-size: $h2;
+  }
+}
+@mixin h3 {
+  font-size: $bp-h3;
+  @media (min-width: $bp-700) {
+    font-size: $h3;
+  }
+}
+@mixin h4() {
+  font-size: $bp-h4;
+  @media (min-width: $bp-700) {
+    font-size: $h4;
+  }
+}
+@mixin h5() {
+  font-size: $bp-h5;
+  @media (min-width: $bp-700) {
+    font-size: $h5;
+  }
+}
+@mixin h() {
+  font-size: $bp-h;
+  @media (min-width: $bp-700) {
+    font-size: $h;
+  }
+}
+@mixin hxs {
+  font-size: $bp-hxs;
+  @media (min-width: $bp-700) {
+    font-size: $hxs;
+  }
+}
+//=========================================
+.h1 {
+  @include h1();
+}
+.h2 {
+  @include h2();
+}
+.h3 {
+  @include h3();
+}
+.h4 {
+  @include h4();
+}
+.h5 {
+  @include h5();
+}
+.h {
+  @include h();
+}
+.hxs {
+  @include hxs();
+}
+.text-contrast {
+  color: #fff;
+}
+.bold {
+  font-weight: 900;
+}
+.thin {
+  font-weight: 200;
+}
+.text-wide {
+  letter-spacing: 1px;
+}
+.text-link {
+  color: $color-link;
+}
+.upper {
+  text-transform: uppercase;
+}
+.emph {
+  font-style: italic;
+}
+
+/*doc
+---
+title: Typography
+name: typography
+category: basics
+---
+typography.scss
+
+```html_example
+<div class="h1">.h1</div>
+<div class="h2">.h2</div>
+<div class="h3">.h3</div>
+<div class="h4">.h4</div>
+<div class="h5">.h5</div>
+<div class="h">.h</div>
+<div class="hxs">.hxs</div>
+<div class="text-contrast">.text-contrast</div>
+<div class="bold">.bold</div>
+<div class="thin">.thin</div>
+<div class="text-wide">.text-wide</div>
+<div class="text-link">.text-link</div>
+<div class="upper">.upper</div>
+<div class="emph">.emph</div>
+```
+*/

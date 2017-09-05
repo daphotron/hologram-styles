@@ -1,0 +1,146 @@
+
+// Buttons
+//=========================================
+// Variables
+$blue: #4a90e2;
+$color-link: $blue;
+//=========================================
+.btn-primary {
+  background-color: $color-link;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($color-link, 10%);
+  }
+  &[disabled] {
+    opacity: 0.3;
+    &:hover {
+      background-color: $color-link;
+      color: #fff;
+      cursor: no-drop;
+    }
+  }
+}
+.btn-primary-contrast {
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  color: $color-link;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: #fff;
+    background-color: $color-link;
+    color: #fff;
+  }
+  &[disabled] {
+    opacity: 0.3;
+    &:hover {
+      background-color: #fff;
+      color: $color-link;
+      cursor: no-drop;
+    }
+  }
+}
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid $color-link;
+  border-radius: 2px;
+  color: $color-link;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-link;
+    color: #fff;
+  }
+  &[disabled] {
+    opacity: 0.3;
+    &:hover {
+      background-color: transparent;
+      color: $color-link;
+      cursor: no-drop;
+    }
+  }
+}
+.btn-secondary-contrast {
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-link;
+    color: #fff;
+  }
+  &[disabled] {
+    opacity: 0.3;
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+      cursor: no-drop;
+    }
+  }
+}
+
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: basics
+---
+buttons.scss
+
+```html_example
+<div class="pad">
+  <a href="#" class="btn-primary">
+    Button primary
+  </a>
+  <a href="#" class="btn-primary" disabled>
+    Button primary
+  </a>
+  <div class="ptd">
+    <a href="#" class="btn-secondary">
+      Button secondary
+    </a>
+    <a href="#" class="btn-secondary" disabled>
+      Button secondary
+    </a>
+  </div>
+</div>
+<div class="pad bg-dark">
+  <a href="#" class="btn-primary-contrast">
+    Button primary-contrast
+  </a>
+  <a href="#" class="btn-primary-contrast" disabled>
+    Button primary-contrast
+  </a>
+  <div class="ptd">
+    <a href="#" class="btn-secondary-contrast">
+      Button secondary-contrast
+    </a>
+    <a href="#" class="btn-secondary-contrast" disabled>
+      Button secondary-contrast
+    </a>
+  </div>
+</div>
+```
+*/
+
+
