@@ -2,11 +2,12 @@
 Hologram Default Style Files intended to be used with a vanilla instance of Middleman
 
 - [Hologram Example Site](https://trulia.github.io/hologram/)
-- [Example Repository] (https://github.com/trulia/hologram-example)
+- [Example Repository](https://github.com/trulia/hologram-example)
 
 # 1. Create Middleman Instance
 ```
 middleman init [NAME_OF_PROJECT]
+cd [NAME_OF_PROJECT]
 middleman build
 middleman server
 ```
@@ -18,10 +19,8 @@ bundle
 ```
 
 # 3. Add test documentation
-…open site.css.scss and add hologram documentation
-```
-category: basics
-```
+…open source/stylesheets/site.css.scss and add [hologram documentation](https://trulia.github.io/hologram/)
+replace `category: Base CSS` with `category: basics`
 
 # 4. Create Styleguide Folder
 ```
