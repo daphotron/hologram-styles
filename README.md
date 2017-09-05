@@ -2,9 +2,11 @@
 Hologram Default Style Files intended to be used with a vanilla instance of Middleman
 
 # 1. CREATE MIDDLEMAN
-`middleman init [NAME_OF_PROJECT]`
-`middleman build`
-`middleman server`
+```
+middleman init [NAME_OF_PROJECT]
+middleman build
+middleman server
+```
 
 # 2. ADD HOLOGRAM GEM
 …go into Gemfile, add `gem 'hologram'`
@@ -12,28 +14,18 @@ Hologram Default Style Files intended to be used with a vanilla instance of Midd
 
 # 3. ADD TEST DOCUMENTATION
 …open site.css.scss and add hologram documentation
-`
-/*doc
----
-title: Buttons
-name: button
-category: basics
----
 
-site.css.scss
-
-```html_example
-<button class="btn btnDefault">Click</button>
-```
-*/
-`
 # 4. CREATE STYLEGUIDE FOLDER
-`cd source`
-`mkdir styleguide`
+```
+cd source
+mkdir styleguide
+```
 
 # 5. INITIALIZE HOLOGRAM INSIDE STYLEGUIDE FOLDER
-`cd styleguide`
-`hologram init`
+```
+cd styleguide
+hologram init
+```
 
 ### 6A. OPTIONAL
 replace styleguide folder with:
@@ -43,15 +35,17 @@ then skip to step # 7. RUN HOLOGRAM
 
 # 6. CONFIGURE HOLOGRAM
 …open hologram_config.yml
-`
+```
 source: ../stylesheets
 destination: ./
 # - ./build
-`
+```
 
 # 7. RUN HOLOGRAM
-`cd ../../`
-`hologram source/styleguide/hologram_config.yml`
+```
+cd ../../
+hologram source/styleguide/hologram_config.yml
+```
 
 # 8. VISIT YOUR STYLEGUIDE
-http://localhost:4567/styleguide/index.html
+/styleguide/index.html
