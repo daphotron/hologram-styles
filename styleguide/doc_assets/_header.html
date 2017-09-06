@@ -4,24 +4,24 @@
     <title>Styleguide: <%= title %></title>
     <link rel="stylesheet" href="/stylesheets/site.css">
     <style>
-      body {
+      .styleguide {
         background: #71707A;
         margin: 0;
         padding: 0;
         text-align: left;
       }
-      .nav ul {
+      .styleguide .nav ul {
         margin: 0;
         padding: 0;
       }
-      .nav {
+      .styleguide .nav {
         padding: 1rem 0;
       }
-      .nav li {
+      .styleguide .nav li {
         border-top: 1px solid #7B7986;
         list-style: none;
       }
-      .nav a {
+      .styleguide .nav a {
         border: 0;
         color: #fff;
         display: block;
@@ -30,22 +30,22 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-      .nav a:hover {
+      .styleguide .nav a:hover {
         background: #575561;
       }
       @media (min-width: 700px) {
-        .nav {
+        .styleguide .nav {
           float: left;
           position: fixed;
           width: 13rem;
         }
       }
 
-      h1 br {
+      .styleguideh1  br {
         display: none;
       }
 
-      .main > p {
+      .styleguide .main > p {
         background: #71707A;
         margin: 0;
         padding: 0 1rem 1rem;
@@ -53,17 +53,17 @@
         color: #fff;
       }
 
-      .main {
+      .styleguide .main {
         background: #C9C8CC;
         padding: 1rem 3rem;
       }
       @media (min-width: 700px) {
-        .main {
+        .styleguide .main {
           margin-left: 13rem;
         }
       }
 
-      .main > h1[id] {
+      .styleguide .main > h1[id] {
         background: #71707A;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -76,18 +76,18 @@
         margin: 1rem 0 0;
         padding: 1.5rem 1rem 1rem;
       }
-      .main > h1[id]:first-child {
+      .styleguide .main > h1[id]:first-child {
         padding-top: 0;
         border-top: none;
       }
 
-      .codeBlock {
+      .styleguide .codeBlock {
         clear: both;
         margin: 0 0 4rem;
         position: relative;
       }
 
-      pre {
+      .styleguidepre  {
         background: #fefefe;
         border: 1px solid #B3B2B6;
         border-bottom-left-radius: 5px;
@@ -99,11 +99,11 @@
         padding: 1rem;
       }
 
-      .highlight pre {
+      .styleguide .highlight pre {
         min-height: 5rem;
       }
 
-      .exampleOutput {
+      .styleguide .exampleOutput {
         background-color: #faf9fe;
         min-height: 5rem;
         border-left: 1px solid #B3B2B6;
@@ -236,7 +236,7 @@
       .syntax pre .il { color: #40a070 } /* Literal.Number.Integer.Long */
     </style>
   </head>
-  <body>
+  <body class="styleguide">
     <nav class="nav">
       <a href="/">< Back Home</a>
       <ul>

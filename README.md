@@ -4,6 +4,12 @@ Hologram Default Style Files intended to be used with a vanilla instance of Midd
 - [Hologram Example Site](https://trulia.github.io/hologram/)
 - [Example Repository] (https://github.com/trulia/hologram-example)
 
+## 0. Prep Tools
+```
+gem install middleman
+gem install hologram
+```
+
 ## 1. Create Middleman Instance
 ```
 middleman init [NAME_OF_PROJECT]
