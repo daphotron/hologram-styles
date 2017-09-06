@@ -1,0 +1,104 @@
+// Forms
+//=========================================
+input[type=text] {
+  border-color: #eee;
+  border-bottom-color: #ccc;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  font-family: $ss-regular;
+  font-size: 18/$base-font-size + 0rem;
+  width: 100%;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: $color-text;
+  background-color: #fff;
+  background-image: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+input[type=text]::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+input[type=text]:focus {
+  background-color: #fff;
+  border-color:  #4A90E2;
+  outline: none;
+}
+input[type=text]::-webkit-input-placeholder,
+input[type=text]::-moz-placeholder,
+input[type=text]:-ms-input-placeholder,
+input[type=text]::placeholder,
+input[type=text]:disabled, input[type=text][readonly],
+input[type=text]:disabled {
+  color: #ddd;
+}
+
+
+/*doc
+---
+title: Forms
+name: forms
+category: basics
+---
+forms.scss
+
+```html_example
+<div class="mbd">
+  <input type="button" value="Send">
+</div>
+<div class="mbd">
+  <input type="text" name="mytext" value="default text">
+</div>
+<div class="mbd">
+  <textarea name="textarea">content</textarea>
+</div>
+<div class="mbd">
+  <input type="password" name="pass" value="12345">
+</div>
+<div class="mbd">
+  <label class="mvs block">
+    <input type="checkbox" name="cb1" value="true" checked>
+    <div class="inline-block">Choice 1</div>
+  </label>
+  <label class="mvs block">
+    <input type="checkbox" name="cb2" value="true" checked>
+    <div class="inline-block">Choice 2</div>
+  </label>
+</div>
+<div class="mbd">
+  <label class="mvs block">
+    <input type="radio" name="myradio" value="radio1" checked>
+    <div class="inline-block">Choice 1</div>
+  </label>
+  <label class="mvs block">
+    <input type="radio" name="myradio" value="radio2">
+    <div class="inline-block">Choice 2</div>
+  </label>
+</div>
+<div class="mbd">
+  <input type="radio" name="id1" value="true" checked> Yes
+  <input type="radio" name="id1" value="false"> No
+</div>
+<div class="mbd">
+  <select name="select">
+    <option>cherry</option>
+    <option>orange</option>
+    <option>apple</option>
+  </select>
+</div>
+<div class="mbd">
+  <input type="file" name="file">
+</div>
+<div class="mbd">
+  <input type="submit" value="Submit">
+</div>
+```
+*/

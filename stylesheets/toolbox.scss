@@ -40,6 +40,9 @@ $bp-700: 700px;
 .inline-block {
   display: inline-block;
 }
+.block {
+  display: inline-block;
+}
 
 // Helpers
 //=========================================
@@ -273,6 +276,7 @@ toolbox.scss
 <div class="absolute">.absolute</div>
 <div class="relative mvd">.relative</div>
 <div class="inline-block">.inline-block</div>
+<div class="block">.block</div>
 <div class="align-center">.align-center</div>
 <div class="align-right">.align-right</div>
 ```
