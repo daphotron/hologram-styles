@@ -43,9 +43,9 @@ category: basics
 
 Button styles:
 
- ``` html_example
+```````html_example
 <button class="btn btn-default">Button</button>
- ```
+```````
 
 */
 ```
