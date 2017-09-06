@@ -13,6 +13,7 @@ gem install hologram
 ## 1. Create Middleman Instance
 ```
 middleman init [NAME_OF_PROJECT]
+cd [NAME_OF_PROJECT]
 middleman build
 middleman server
 ```
